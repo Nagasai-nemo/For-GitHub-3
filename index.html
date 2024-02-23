@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nemo Gaming</title>
+    <link rel="icon" type="image/x-icon" href="./finding-nemo-pic.jpg">
     <script src="https://kit.fontawesome.com/e3084b8d2e.js" crossorigin="anonymous"></script>
 
     <style>
@@ -127,11 +128,12 @@
         }
 
         .middle-text button {
+            margin-left: -40px;
             margin-top: 50px;
             min-height: 10%;
             min-width: 15%;
-            font-size: 15px;
-            border-radius: 20px;
+            font-size: 1rem;
+            border-radius: 2rem;
             background-color: #dc3545;
             border: 0;
         }
@@ -475,8 +477,28 @@
             /* flex-wrap: wrap; */
             flex-direction: column;
            }
+           .middle-text{
+            text-align: center;
+            margin-left: 19%;
+           }
+           .middle-text input{
+             width: 50px;
+           }
+           .middle-text button{
+            margin-left: -15px;
+            width: auto;
+            font-size: auto;
+           }
            .view-all{
             display: none;
+           }
+           .center-for-text{
+            display: flex;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            width: 200px;
+            align-items: center;
+            margin-left: -60px;
            }
            .six-boxes{
             padding-top: 40px;
@@ -526,6 +548,24 @@
            .five-boxes{
             margin: 20px;
            }
+        }
+        @media (max-width:1100px){
+            .middle-content{
+                display: flex;
+                flex-direction: column;
+            }
+            .bottom-part{
+                margin-top: 0;
+            }
+            .box{
+                margin: 25px;
+            }
+            .six-boxes{
+                margin: 25px;
+            }
+            .five-boxes{
+                margin: 20px;
+            }
         }
     </style>
 </head>
