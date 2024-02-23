@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemo Gaming</title>
+    <script src="https://kit.fontawesome.com/e3084b8d2e.js" crossorigin="anonymous"></script>
+
+    <style>
+        .body {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .container {
+            /* height: 100vh;
+            width: 100vw; */
+            margin: 0 auto;
+        }
+
+        .top-container {
+            border-bottom-left-radius: 70px;
+            border-bottom-right-radius: 70px;
+            max-width: 100%;
+            background-image: url(./banner-bg.jpg)
+        }
+
+
+        .header {
+            /* z-index: 100; */
+            
+            display: flex;
+            flex-direction: row;
+            max-height: 75px;
+            background-color: #007aff;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .header-align {
+            max-width: 30%;
+        }
+
+        .header h1 {
+            color: white;
+            justify-content: left;
+            align-items: left;
+            margin-left: 50px;
+            /* background-color: aquamarine; */
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            align-items: right;
+            width: 90%;
+            list-style: none;
+            /* background-color: chartreuse; */
+        }
+
+        .menu ul {
+            color: white;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            margin-top: 10px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-button {
+            display: flex;
+            padding: 12px;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu-button:last-child {
+            background-color: #dc3545;
+        }
+
+        .menu-button:hover {
+            background-color: rgb(91, 91, 199);
+        }
+
+        .middle-content {
+            display: flex;
+            flex-direction: row;
+            /* background-color: greenyellow; */
+            min-height: 90vh;
+            max-width: 100%;
+        }
+
+        .middle-text {
+            color: white;
+            padding-top: 100px;
+            /* margin-top: 100px; */
+            max-height: 90%;
+            max-width: 60%;
+            /* background-color: chartreuse; */
+            margin-left: 100px;
+        }
+
+        .middle-text p:first-child {
+            font-size: 1.5rem;
+        }
+
+        /* .text{
+            max-width: 70%;
+         } */
+        .middle-text h1 {
+            font-size: 40px;
+        }
+
+        .middle-text input {
+            margin-top: 50px;
+            min-height: 9%;
+            min-width: 50%;
+            border-radius: 20px;
+            border: 0;
+        }
+
+        .middle-text button {
+            margin-top: 50px;
+            min-height: 10%;
+            min-width: 15%;
+            font-size: 15px;
+            border-radius: 20px;
+            background-color: #dc3545;
+            border: 0;
+        }
+
+        .middle-banner {
+            /* margin-top: 100px; */
+            padding-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* height: 80%; */
+            min-width: 40%;
+            /* background-color: chocolate; */
+        }
+
+        .middle-banner img {
+            max-height: 27rem;
+            border-radius: 30px;
+        }
+
+        .bottom-part {
+            margin-top: 100px;
+            min-height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            /* background-color: brown; */
+        }
+
+        .middle-empty {
+            min-height: 100px;
+            min-width: 100px;
+            border-radius: 50%;
+            background-color: #007aff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .middle-empty:hover {
+            background-color: #dc3545;
+        }
+
+        .box {
+            min-width: 250px;
+            min-height: 200px;
+            box-shadow: 0 5px 5px rgb(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 25px;
+
+        }
+
+        .bottom-part-img {
+            top: 30px;
+            height: 50px;
+            width: 50px;
+        }
+
+        .bottom-part-caption {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .trending-part {
+            margin-top: 150px;
+            min-height: 400px;
+            max-width: 100%;
+            /* background-color: burlywood; */
+            /* display: flex;
+            flex-wrap: wrap; */
+        }
+
+        .trending-head {
+            display: flex;
+            flex-direction: row;
+            /* background-color: black; */
+        }
+
+        .trending-small-text {
+            font-family: 'Poppins', sans-serif;
+            color: #dc3545;
+        }
+
+        .trending-part-1 {
+            width: 80%;
+            padding-left: 100px;
+            /* background-color: white; */
+        }
+
+        .trending-part-1 p {
+            font-size: 1.2rem;
+            color: #dc3545;
+        }
+
+        .trending-part-1 h2 {
+            font-size: 2rem;
+        }
+
+        .view-all {
+            margin-top: 50px;
+            max-height: 40px;
+            max-width: 100px;
+            /* background-color: green; */
+        }
+
+        .view-button {
+            height: 40px;
+            width: 100px;
+            border-radius: 30px;
+            background-color: #dc3545;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            border: 0;
+        }
+
+        .view-button:hover {
+            background-color: #da747e;
+        }
+
+        .trending-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .trending-box {
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 270px;
+            width: 250px;
+            background-color: rgb(247, 245, 245);
+            border-radius: 30px;
+
+        }
+
+        .trending-box img {
+            height: 180px;
+            width: 250px;
+            border-radius: 30px;
+            margin-top: 0;
+        }
+
+        .fo-caption {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .caption p {
+            font-family: 'Poppins', sans-serif;
+            color: gray;
+        }
+
+        .caption h3:hover {
+            color: #007aff;
+        }
+
+        .bgm-empty {
+            display: flex;
+            justify-content: center;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: #dc3545;
+            margin-top: 30px;
+            color: white;
+            align-items: center;
+        }
+
+        .bgm-empty:hover {
+            background-color: #007aff;
+        }
+
+        .caption-2:hover {
+            color: #007aff;
+        }
+
+        .center-content {
+            /* display: flex;
+            flex-wrap: wrap; */
+            margin-top: 150px;
+            min-height: 500px;
+            max-width: 100%;
+            background-color: whitesmoke;
+            border-radius: 13%;
+        }
+
+        .center-head {
+            display: flex;
+            /* flex-wrap: wrap; */
+            /* flex-direction: row; */
+            /* background-color: black; */
+        }
+
+        .center-for-text {
+            display: flex;
+            flex-direction: column;
+            min-width: 80%;
+            padding-left: 100px;
+        }
+
+        .center-for-text p {
+            font-size: 1.2rem;
+            color: #dc3545;
+        }
+
+        .center-for-text {
+            font-size: 1.4rem;
+            margin-top: 0;
+        }
+
+        .center-bottom {
+            padding: 30px;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            /* background-color: rebeccapurple; */
+        }
+
+        .six-boxes {
+            max-height: 280px;
+            min-width: 180px;
+            /* background-color: yellow; */
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .six-boxes img {
+            height: 170px;
+            width: 180px;
+            border-radius: 30px;
+        }
+
+        .six-boxes p {
+            color: gray;
+        }
+
+        .six-boxes h2 {
+            margin-top: 0;
+            padding: 0;
+        }
+
+        .six-boxes h2:hover {
+            color: #007aff;
+        }
+
+        .six-boxes button {
+            height: 35px;
+            width: 90px;
+            background-color: #dc3545;
+            border-radius: 30px;
+            border: 0;
+        }
+
+        .six-boxes button:hover {
+            background-color: #007aff;
+        }
+
+        .categories {
+            margin-top: 150px;
+            max-width: 100%;
+            min-height: 400px;
+            /* background-color: blueviolet; */
+        }
+
+        .categories-head {
+            text-align: center;
+            /* background-color: aqua; */
+        }
+
+        .categories-head p {
+            color: #dc3545;
+            font-size: 1.2rem;
+        }
+
+        .categories-head h2 {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .categories-bottom {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .five-boxes {
+            height: 270px;
+            width: 220px;
+            background-color: #007aff;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .five-boxes p {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .five-boxes img {
+            height: 200px;
+            width: 220px;
+            margin-top: 10px;
+            border-radius: 30px;
+        }
+
+        .footer {
+            margin-top: 300px;
+            height: 150px;
+            width: 100%;
+            background-color: #007aff;
+            border-top-right-radius: 150px;
+            border-top-left-radius: 150px;
+            /* display: flex; */
+            text-align: center;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        .footer p {
+            padding: 30px;
+            /* background-color: aqua; */
+        }
+        @media (max-width:480px){
+            .menu ul{
+                display: none;
+            }
+           .middle-content{
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-direction: column;
+           }
+           .view-all{
+            display: none;
+           }
+           .six-boxes{
+            padding-top: 40px;
+           }
+        }
+        @media (max-width:600px){
+            .menu ul{
+                display: none;
+            }
+            .middle-content{
+            display: flex;
+            flex-direction: column;
+           }
+           .view-all{
+            display: none;
+           }
+           .six-boxes{
+            padding-top: 40px;
+           }
+           .five-boxes{
+            margin-top: 30px;
+           }
+        }
+        @media (max-width:900px){
+            .header-align{
+                min-width: 50%;
+            }
+            .menu{
+                min-width: 50%;
+            }
+            .middle-content{
+                display: flex;
+                flex-direction: column;
+            }
+            .box{
+                margin: 20px;
+            }
+            .view-all{
+            display: none;
+           }
+           .trending-box{
+            margin: 20px;
+           }
+           .six-boxes{
+            padding-top: 40px;
+           }
+           .five-boxes{
+            margin: 20px;
+           }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-container">
+            <div class="header">
+                <div class="header-align">
+                    <h1>Nemo</h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="menu-button">Home</li>
+                        <li class="menu-button">Our Shop</li>
+                        <li class="menu-button">Product Details</li>
+                        <li class="menu-button">Contact Us</li>
+                        <li class="menu-button">Sign In</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="middle-content">
+                <div class="middle-text">
+                    <p>Welcome to Nemo gaming</p>
+                    <h1><b>BEST GAMING SITE EVER</b></h1>
+                    <p class="text">LUGX Gaming is free Bootstrap 5 HTML CSS website template for your gaming websites.
+                        You can download and use this layout for commercial purposes.<br> Please tell your friends about
+                        TemplateMo.</p>
+                    <input type="text" placeholder="Type Something">
+                    <button>Search Now</button>
+                </div>
+                <div class="middle-banner">
+                    <img src="./banner-image.jpg" alt="">
+                </div>
+            </div>
+            <div class="bottom-part">
+                <div class="box">
+                    <div class="middle-empty">
+                        <img class="bottom-part-img" src="./icon-4.png" alt="">
+                    </div>
+                    <div class="bottom-part-caption"><b>
+                            <p>FREE STORAGE</p>
+                        </b></div>
+                </div>
+
+                <div class="box">
+                    <div class="middle-empty"><img class="bottom-part-img" src="./icon-3.png" alt=""></div>
+
+                    <div class="bottom-part-caption"><b>
+                            <p>USER MODE</p>
+                        </b></div>
+                </div>
+
+                <div class="box">
+                    <div class="middle-empty"><img class="bottom-part-img" src="./icon-2.png" alt=""></div>
+
+                    <div class="bottom-part-caption"><b>
+                            <p>REPLY READY</p>
+                        </b></div>
+                </div>
+
+                <div class="box">
+                    <div class="middle-empty"><img class="bottom-part-img" src="./icon-1.png" alt=""></div>
+
+                    <div class="bottom-part-caption"><b>
+                            <p>EASY LAYOUT</p>
+                        </b></div>
+                </div>
+            </div>
+        </div>
+        <div class="trending-part">
+            <div class="trending-head">
+                <div class="trending-part-1">
+                    <p><B>TRENDING</B></p>
+                    <h2><b>Trending Games</b></h2>
+                </div>
+                <div class="view-all">
+                    <button class="view-button"><b>VIEW ALL</b></button>
+                </div>
+            </div>
+
+            <div class="trending-bottom">
+                <div class="trending-box">
+                    <img src="./trending-01.jpg" alt="sry">
+                    <div class="fo-caption">
+                        <div class="caption">
+                            <p>Action</p>
+                            <h3><b>Assian Creed</b></h3>
+                        </div>
+                        <div class="bgm-empty"><i class="fas fa-shopping-bag"></i></div>
+                    </div>
+                </div>
+                <div class="trending-box">
+                    <img src="./trending-02.jpg" alt="sry">
+                    <div class="fo-caption">
+                        <div class="caption">
+                            <p>Action</p>
+                            <h3><b>Assian Creed</b></h3>
+                        </div>
+                        <div class="bgm-empty"><i class="fas fa-shopping-bag"></i></div>
+                    </div>
+                </div>
+                <div class="trending-box">
+                    <img src="./trending-03.jpg" alt="sry">
+                    <div class="fo-caption">
+                        <div class="caption">
+                            <p>Action</p>
+                            <h3><b>Assian Creed</b></h3>
+                        </div>
+                        <div class="bgm-empty"><i class="fas fa-shopping-bag"></i></div>
+                    </div>
+                </div>
+                <div class="trending-box">
+                    <img src="./trending-04.jpg" alt="sry">
+                    <div class="fo-caption">
+                        <div class="caption">
+                            <p>Action</p>
+                            <h3><b>Assian Creed</b></h3>
+                        </div>
+                        <div class="bgm-empty"><i class="fas fa-shopping-bag"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center-content">
+            <div class="center-head">
+                <div class="center-for-text">
+                    <p><b>TOP GAMES</b></p>
+                    <h1><B>Most Played</B></h1>
+                </div>
+                <div class="view-all">
+                    <button class="view-button"><b>VIEW ALL</b></button>
+                </div>
+            </div>
+            <div class="center-bottom">
+                <div class="six-boxes">
+                    <img src="./top-game-01.jpg" alt="">
+                    <p>Adventure</p>
+                    <h2>Assasin Creed</h2>
+                    <button>Explore</button>
+                </div>
+                <div class="six-boxes">
+                    <img src="./top-game-02.jpg" alt="">
+                    <p>Adventure</p>
+                    <h2>Assasin Creed</h2>
+                    <button>Explore</button>
+                </div>
+                <div class="six-boxes">
+                    <img src="./top-game-03.jpg" alt="">
+                    <p>Adventure</p>
+                    <h2>Assasin Creed</h2>
+                    <button>Explore</button>
+                </div>
+                <div class="six-boxes">
+                    <img src="./top-game-04.jpg" alt="">
+                    <p>Adventure</p>
+                    <h2>Assasin Creed</h2>
+                    <button>Explore</button>
+                </div>
+                <div class="six-boxes">
+                    <img src="./top-game-05.jpg" alt="">
+                    <p>Adventure</p>
+                    <h2>Assasin Creed</h2>
+                    <button>Explore</button>
+                </div>
+                <div class="six-boxes">
+                    <img src="./top-game-06.jpg" alt="">
+                    <p>Adventure</p>
+                    <h2>Assasin Creed</h2>
+                    <button>Explore</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="categories">
+            <div class="categories-head">
+                <p><b>CATEGORIES</b></p>
+                <h2>Top Categories</h2>
+            </div>
+            <div class="categories-bottom">
+                <div class="five-boxes">
+                    <p><b>Action</b></p>
+                    <img src="./categories-01.jpg" alt="">
+                </div>
+                <div class="five-boxes">
+                    <p><b>Action</b></p>
+                    <img src="./trending-01.jpg" alt="">
+                </div>
+                <div class="five-boxes">
+                    <p><b>Action</b></p>
+                    <img src="./trending-02.jpg" alt="">
+                </div>
+                <div class="five-boxes">
+                    <p><b>Action</b></p>
+                    <img src="./trending-03.jpg" alt="">
+                </div>
+                <div class="five-boxes">
+                    <p><b>Action</b></p>
+                    <img src="./trending-01.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>This Web page was developed under the professionals. Don't try this when you all
+                alone</p>
+        </div>
+    </div>
+</body>
+
+</html>
